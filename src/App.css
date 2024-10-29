@@ -1,38 +1,135 @@
-.App {
-  text-align: center;
+body {
+    background-color: #70937e;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.todo-app {
+    max-width: 1000px;
+    margin: auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 20px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.todo-app h1 {
+    text-align: center;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.add-task-container {
+    padding: 15px;
+    margin-top: 20px;
 }
 
-.App-link {
-  color: #61dafb;
+.add-task-input {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid black;
+    border-radius: 5px;
+    box-sizing: border-box;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.add-task-button {
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 15px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 10px;
+    width: 100%;
+    transition: background-color 0.3s;
+    box-sizing: border-box;
+}
+
+.add-task-button:hover {
+    background-color: #45a049;
+}
+
+.todo-filters {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    flex-wrap: wrap; 
+}
+
+.todo-filters h3 {
+    margin-right: 20px;
+    padding: 15px;
+}
+
+.todo-filters input {
+    padding: 15px;
+    border: 1px solid black;
+    border-radius: 15px;
+    margin-right: 10px;
+    flex-grow: 1;
+    box-sizing: border-box;
+}
+
+.filter-buttons {
+    display: flex;
+}
+
+.todo-filters button {
+    background-color: #808080;
+    color: white;
+    border: none;
+    padding: 15px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-left: 5px;
+    transition: background-color 0.3s;
+    box-sizing: border-box;
+}
+
+.todo-filters button.active {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.todo-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+    transition: background-color 0.3s;
+    height: 60px;
+    width: calc(100% - 30px);
+    box-sizing: border-box;
+    overflow: hidden; 
+}
+
+.todo-item.completed {
+    background-color: #d4edda;
+}
+
+.todo-item button {
+    background: none;
+    border: none;
+    color: inherit;
+    cursor: pointer;
+    padding: 0;
+    font-size: 16px;
+    transition: color 0.3s;
+}
+
+@media (max-width: 600px) {
+    .todo-app {
+        padding: 10px;
+    }
+    .add-task-input,
+    .add-task-button,
+    .todo-filters input,
+    .todo-filters button {
+        padding: 10px;
+    }
+    .todo-item {
+        height: auto;
+        overflow: hidden; 
+        white-space: nowrap; 
+        text-overflow: ellipsis; 
+    }
 }
