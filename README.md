@@ -5,17 +5,9 @@ In the project directory, you can run:
 
 Install TypeScript
 
-bash
-
-Copy code
 
 **npm install typescript@4.9.5 --save-dev**
 
-Start the App
-
-bash
-
-Copy code
 
 npm install
 
